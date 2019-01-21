@@ -11,18 +11,18 @@
 		"Other"
 	],
 	"activationEvents": [
-		"*"
+		"workspaceContains:package.json"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.taskRunner",
-				"title": "Task Runner"
-			},
-			{
-				"command": "extension.loadScripts",
-				"title": "Load Scripts"
+				"command": "task-runner.refreshScripts",
+				"title": "Refresh",
+				"icon": {
+					"light": "resources/light/refresh.svg",
+					"dark": "resources/dark/refresh.svg"
+				}
 			}
 		],
 		"viewsContainers": {

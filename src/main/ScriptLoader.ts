@@ -1,5 +1,6 @@
 import { window, workspace } from "vscode";
 import * as fs from  'fs';
+import { ScriptManager } from "./ScriptsManager";
 
 export function loadScripts() {
   if (workspace.workspaceFolders !== undefined) {
@@ -8,10 +9,8 @@ export function loadScripts() {
         console.log(err); 
         throw err;
       }
-      const npm = JSON.parse(data.toString());
-      console.log(npm.scripts);
+      ScriptManager.addScripts(JSON.parse(data.toString()).scripts.keys());
       window.showInformationMessage('Scripts Loaded');
     });
   }
 }
-

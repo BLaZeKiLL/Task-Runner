@@ -7,13 +7,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 	console.log('TASK RUNNER STARTED');
 
-	let mainCommand = vscode.commands.registerCommand('extension.taskRunner', () => {
-		vscode.window.showInformationMessage('Task Runner Activated');
-	});
-
-	context.subscriptions.push(mainCommand);
-
-	let loadScriptsCommand = vscode.commands.registerCommand('extension.loadScripts', () => {
+	let loadScriptsCommand = vscode.commands.registerCommand('task-runner.refreshScripts', () => {
 		loadScripts();
 	});
 

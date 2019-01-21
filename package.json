@@ -21,8 +21,8 @@
 				"title": "Task Runner"
 			},
 			{
-				"command": "extension.viewTime",
-				"title": "View Time"
+				"command": "extension.loadScripts",
+				"title": "Load Scripts"
 			}
 		],
 		"viewsContainers": {

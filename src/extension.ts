@@ -1,4 +1,5 @@
 import * as vscode from 'vscode';
+import { loadScripts } from "./main/ScriptLoader";
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -12,11 +13,11 @@ export function activate(context: vscode.ExtensionContext) {
 
 	context.subscriptions.push(mainCommand);
 
-	let timeCommand = vscode.commands.registerCommand('extension.viewTime', () => {
-		vscode.window.showInformationMessage(`Current Time: ${new Date()}`);
+	let loadScriptsCommand = vscode.commands.registerCommand('extension.loadScripts', () => {
+		loadScripts();
 	});
 
-	context.subscriptions.push(timeCommand);
+	context.subscriptions.push(loadScriptsCommand);
 
 }
 

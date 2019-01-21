@@ -1,5 +1,6 @@
 {
 	"name": "task-runner",
+	"publisher": "BLaZeKiLL",
 	"displayName": "Task Runner",
 	"description": "Simple GUI for running npm scripts",
 	"version": "0.0.1",

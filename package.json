@@ -10,7 +10,7 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.taskRunner"
+		"*"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -18,6 +18,10 @@
 			{
 				"command": "extension.taskRunner",
 				"title": "Task Runner"
+			},
+			{
+				"command": "extension.viewTime",
+				"title": "View Time"
 			}
 		]
 	},

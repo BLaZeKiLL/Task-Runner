@@ -5,6 +5,7 @@ export class ScriptManager {
   private static scripts: Script[];
 
   public static addScripts(scripts: string[]) {
+    console.log(JSON.stringify(scripts));
     scripts.forEach((script: string) => {
       this.scripts.push(new Script(script));
     });

@@ -18,10 +18,10 @@
 		"commands": [
 			{
 				"command": "task-runner.refreshScripts",
-				"title": "Refresh",
+				"title": "Refresh Scripts",
 				"icon": {
-					"light": "resources/light/refresh.svg",
-					"dark": "resources/dark/refresh.svg"
+					"light": "res/light/refresh.svg",
+					"dark": "res/dark/refresh.svg"
 				}
 			}
 		],
@@ -39,10 +39,14 @@
 				{
 					"id": "tasks",
 					"name": "Tasks"
+				}
+			]
 				},
+		"menus": {
+			"view/title": [
 				{
-					"id": "recent",
-					"name": "Recent"
+					"command": "task-runner.refreshScripts",
+					"group": "navigation"
 				}
 			]
 		}

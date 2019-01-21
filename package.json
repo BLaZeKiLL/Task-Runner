@@ -24,7 +24,28 @@
 				"command": "extension.viewTime",
 				"title": "View Time"
 			}
-		]
+		],
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "task-runner",
+					"title": "Task Runner",
+					"icon": "res/tasklist.svg"
+				}
+			]
+		},
+		"views": {
+			"task-runner": [
+				{
+					"id": "tasks",
+					"name": "Tasks"
+				},
+				{
+					"id": "recent",
+					"name": "Recent"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",

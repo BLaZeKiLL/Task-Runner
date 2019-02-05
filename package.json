@@ -27,6 +27,14 @@
 					"light": "res/light/refresh.svg",
 					"dark": "res/dark/refresh.svg"
 				}
+			},
+			{
+				"command": "task-runner.run",
+				"title": "Run Task",
+				"icon": {
+					"light": "res/run.svg",
+					"dark": "res/run.svg"
+				}
 			}
 		],
 		"viewsContainers": {
@@ -51,6 +59,12 @@
 				{
 					"command": "task-runner.refreshScripts",
 					"group": "navigation"
+				}
+			],
+			"view/item/context": [
+				{
+					"command": "task-runner.run",
+					"group": "inline"
 				}
 			]
 		}

@@ -1,24 +1,19 @@
-import { Script, ScriptItem } from "./Script";
+import { Task } from "vscode";
 
 export class ScriptManager {
 
-  private static scripts: Script[]
+  private static tasks: Map<string, Task> = new Map<string, Task>();
 
-  public static refreshScripts(scripts: string[]): ScriptItem[] {
-    this.scripts = [];
-    const items: ScriptItem[] = [];
-
-    console.log(`SCRIPTS: ${JSON.stringify(scripts)}`);
-    scripts.forEach((script: string) => {
-      this.scripts.push(new Script(script));
-      items.push(new ScriptItem(script));
-    });
-
-    return items;
+  public static addTask(task: Task): void {
+    this.tasks.set(task.name, task);
   }
 
-  public static get Scripts(): Script[] {
-    return this.scripts;
+  public static getTask(name: string): Task | undefined {
+    return this.tasks.get(name);
+  }
+
+  public static clear(): void {
+    this.tasks.clear();
   }
 
 }

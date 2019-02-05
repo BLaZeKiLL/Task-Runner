@@ -3,7 +3,7 @@
 	"publisher": "BLaZeKiLL",
 	"displayName": "Task Runner",
 	"description": "Simple GUI for running npm scripts",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"repository": {
 		"type": "Github",
 		"url": "https://github.com/BLaZeKiLL/Task-Runner"

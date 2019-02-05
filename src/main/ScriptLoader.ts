@@ -9,7 +9,8 @@ export function loadScripts() {
         console.log(err); 
         throw err;
       }
-      ScriptManager.addScripts(JSON.parse(data.toString()).scripts.keys());
+      console.log('PACKAGE READ');
+      ScriptManager.addScripts(Object.keys(JSON.parse(data.toString()).scripts));
       window.showInformationMessage('Scripts Loaded');
     });
   }
